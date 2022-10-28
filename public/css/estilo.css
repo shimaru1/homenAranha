@@ -1,0 +1,57 @@
+nav{
+    font-family: 'Cairo';
+    text-transform: uppercase;
+}
+*{
+    margin: 0;
+}
+
+body{
+    background-color: white;
+
+}
+
+
+:root{
+    --primary:rgb(33,33,33);
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: var(--primary);
+    font-family: 'Cairo';
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: .1s;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.controle-cards{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.controle-cards .card{
+    margin: 20px;
+}
+
+.controle-cards .card img{
+    width: 100%;
+    
+}
+
+.card-footer .btn{
+    border: 2px solid black;
+
+}
