@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +17,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[HomeController::class,'MostrarHome'])->name('home');
-Route::get('/',[CuriosidadeController::class,'curiosidade'])->name('curiosidade');
+
+Route::get('/editar-usuario',[cadastroController::class,'MostrarEditarUsuario'])->name('editar-usuario');
+Route::get('/cadastrar-usuario',[cadastroController::class,'FormularioCadastro'])->name('cadastrar-usuario');
+Route::post('/cadastrar-usuario',[cadastroController::class,'SalvarBanco'])->name('salvar-banco');
+
+//deletar
+
+Route::delete('/editar-usuario/{registrosUsuarios}',[cadastroController::class,'ApagarBancoUsuario'])->name('apagar-usuario');
+
+//alterar caminhao
+
+Route::get('/alterar-usuario/{registrosUsuarios}',[cadastroController::class,'MostrarAlterarUsuario'])->name('alterar-usuario');
+Route::put('/editar-usuario/{registrosUsuarios}',[cadastroController::class,'AlterarBancoUsuario'])->name('alterar-banco-usuario');
