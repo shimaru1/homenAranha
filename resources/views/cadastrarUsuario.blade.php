@@ -2,44 +2,40 @@
 @section('content')
 <section>
   <div class="container cadastroUsuario">
-    <form class="row g-3" method="post" action="{{route('alterar-banco-usuario',$registrosUsuario->id)}}">
+    <form class="row g-3" method="post" action="{{route('salvar-banco')}}">
       @csrf
-      @method('put')
       <div class="col-md-12">
-        <label for="inputnome" class="form-label">nome</label>
-        <input type="text" name="nome" value="{{old('nome',$registrosUsuario->nome)}}" class="form-control" id="inputModelo" placeholder="Fusca">
+        <label for="inputnome" class="form-label">nome do HQ</label>
+        <input type="text" name="nome" value="{{old('nome')}}" class="form-control" id="inputnome" placeholder="nome do HQ">
         @error('nome')
         <div class="text-sm-start text-light">*Preencher o campo nome.</div>
         @enderror
       </div>
 
       <div class="col-12">
-        <label for="inputusuario" class="form-label">usuario</label>
-        <input type="text" name="usuario" value="{{old('usuario',$registrosUsuario>usuario)}}" class="form-control" id="inputMarca" placeholder="BMW">
-        @error('usuario')
-        <div class="text-sm-start text-light">*Preencher o campo usuario.</div>
+        <label for="inputUsuario" class="form-label">ano do volume</label>
+        <input type="text" name="Usuario" value="{{old('Usuario')}}" class="form-control" id="inputUsuario" placeholder="ano do volume">
+        @error('Usuario')
+        <div class="text-sm-start text-light">*Preencher o campo ano do volume.</div>
         @enderror
       </div>
       <div class="col-12">
-        <label for="inputsenha" class="form-label">senha</label>
-        <input type="text" name="senha" value="{{old('senha',$registrosUsuario->senha)}}" class="form-control" id="inputAno" placeholder="2000">
+        <label for="inputsenha" class="form-label">numero da edição</label>
+        <input type="text" name="senha" value="{{old('senha')}}" class="form-control" id="inputsenha" placeholder="numero da edição">
         @error('senha')
-        <div class="text-sm-start text-light">*Preencher o campo senha.</div>
+        <div class="text-sm-start text-light">*Preencher o campo numero da edição.</div>
         @enderror
       </div>
       <div class="col-md-12">
-        <label for="inputemail" class="form-label">email</label>
-        <input type="text" name="email" value="{{old('email',$registrosUsuario->email)}}" class="form-control" id="inputCor" placeholder="Preto">
+        <label for="inputCor" class="form-label">autor</label>
+        <input type="text" name="cor" value="{{old('email')}}" class="form-control" id="inputCor" placeholder="o nome do autor">
         @error('email')
-        <div class="text-sm-start text-light">*Preencher o campo email.</div>
+        <div class="text-sm-start text-light">*Preencher o campo autor.</div>
         @enderror
       </div>
 
-     
-      </div>
-
       <div class="col-12">
-        <button type="submit" class="btn btn-primary">Atualizar</button>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
       </div>
     </form>
   </div>

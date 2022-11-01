@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
-use App\Models\cadastro;
+use App\Models\usuario;
 
 class usuarioController extends Controller
 {
@@ -16,6 +16,7 @@ class usuarioController extends Controller
 
                
         $dadosUsuario = Usuario::query();
+
         $dadosUsuario->when($request->Usuario,function($query, $vl){
             $query->where('Usuario','like','%'.$vl.'%');
         });

@@ -1,5 +1,8 @@
 @extends('padrao')
 @section('content')
+<h2 class="text-center">
+  Falando um pouco sobre a historia
+</h2>
 <div class="card-group">
         <div class="card">
           <img src="img/homemA.jpg" class="card-img-top" alt="...">

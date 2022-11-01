@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/estilo.css">
     <title>Comic-Show</title>
 </head>
 <body>
@@ -26,13 +26,12 @@
           <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{'/cadastrar'}}">cadastro</a>
+          <a class="nav-link" href="{{'/cadastrar-usuario'}}">cadastro</a>
+        </li>
+        
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link" href="{{'/editar-usuario'}}">gerenciar</a>
         </li>
       </ul>
     </div>
@@ -63,18 +62,18 @@
 
 @yield('content')
 
-<footer > 
+<footer class="footer"> 
         <div class="text-center">
             <nav> 
                 <h2>Fique conectado !</h2>
                 <ul> 
-                <a href="https://www.instagram.com/driftcarros/">
+                <a href="https://www.instagram.com/nerdallstars/">
                 <img src="/img/insta.png" alt="">
                 </a>
-                 <a href="https://www.youtube.com/watch?v=zaOtnaJuIzk">
+                 <a href="https://www.youtube.com/watch?v=G5d-mlrpv4M">
                   <img src="/img/youtube.png" alt="">
                  </a>
-                <a href="https://pt-br.facebook.com/groups/247202169028650/">
+                <a href="https://www.facebook.com/nerdallstars">
                 <img src="/img/facebook.png" alt="">
                 </a>
                 </ul> 
