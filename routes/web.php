@@ -39,5 +39,5 @@ Route::post('/cadastrar-usuario',[UsuarioController::class,'SalvarBanco'])->name
 
 Route::delete('/editar-usuario/{registrosUsuarios}',[UsuarioController::class,'ApagarBancoUsuario'])->name('apagar-usuario');
 //alterar caminhao
-Route::get('/alterar-usuario/{registrosUsuarios}',[UsuarioController::class,'MostrarAlterarUsuarioo'])->name('alterar-usuario');
+Route::get('/alterar-usuario/{registrosUsuarios}',[UsuarioController::class,'MostrarAlterarUsuario'])->name('alterar-Usuario');
 Route::put('/editar-usuario/{registrosUsuarios}',[UsuarioController::class,'AlterarBancoUsuario'])->name('alterar-banco-usuario');

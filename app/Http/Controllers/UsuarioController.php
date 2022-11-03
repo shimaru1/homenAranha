@@ -16,17 +16,20 @@ class UsuarioController extends Controller
     public function MostrarEditarUsuario(Request $request)
     {
 
-        $dadosUsuario = Usuario::all();
+        //$dadosUsuario = Usuario::all();
         //dd($dadosCaminhao);
 
         $dadosUsuario = Usuario::query();
         $dadosUsuario->when($request->nome, function ($query, $v1) {
             $query->where('nome', 'like', '%' . $v1 . '%');
         });
-        return view('editarUsuario', [
-            'resgistrarUsuario' => $dadosUsuario
-        ]);
+
         $dadosUsuario = $dadosUsuario->get();
+        
+        return view('editarUsuario', [
+            'registrosUsuario' => $dadosUsuario
+        ]);
+       
     }
 
     public function SalvarBanco(Request $request)
@@ -40,7 +43,7 @@ class UsuarioController extends Controller
         ]);
 
         Usuario::create($dadosUsuario);
-        return Redirect::route('home');
+        //return Redirect::route('home');
     }
 
     public function ApagarBancoUsuario(Usuario $registrosUsuarios)

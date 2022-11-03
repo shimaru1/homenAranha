@@ -7,7 +7,7 @@
     <div class="row center" acction="/editar-usuario">
       <form method="get">
         <div class="col">
-          <input type="text" id="Usuario" name="usuario" class="form-control" placeholder="Digite o nome do usuario" aria-label="First name">
+          <input type="text" id="Usuario" name="usuario" class="form-control" placeholder="Digite o nome do volume" aria-label="First name">
         </div>
 
         <div class="col">
@@ -32,6 +32,7 @@
       </tr>
     </thead>
     <tbody>
+   
       @foreach($registrosUsuario as $registrosUsuarios)
       <tr>
         <th scope="row">{{$registrosUsuarios->id}}</th>
@@ -50,7 +51,7 @@
         </td>
 
         <td>
-          <form method="Post" Action="{{route('apagar-usuario',$registrosUsuario->id)}}">
+          <form method="Post" Action="{{route('apagar-usuario',$registrosUsuarios->id)}}">
             @method('delete')
             @csrf
 
